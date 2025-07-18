@@ -1,20 +1,200 @@
+/* General Reset & Body Background */
 body {
-    font-family: Arial, Helvetica, sans-serif; /* até trocar pela certa */
-    margin: 10px;
-    padding: 10px;
-    font-size: 130%;
-
-}
-
-header {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* A slightly nicer font */
     display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scrolling if content exceeds viewport height */
+
+    /* Background Image Styling */
+    background-image: url("./images/bgImg.jpg"); /* REPLACE THIS URL with your image path */
+    background-size: cover; /* Covers the entire body */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-color: transparent; /* Fallback color if image doesn't load */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-/* // <weight>: Use a value from 200 to 1000
-// <uniquifier>: Use a unique and descriptive class name */
+/* --- Navbar Styles (Larger & with subtle shadow) --- */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* height: 80px; Larger header height */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Lighter border */
+    box-sizing: border-box;
+    background-color: white; /* Slightly transparent white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensures it stays on top */
+}
 
+.nav-links {
+    display: flex;
+    margin: 30px;
+    width: 40%;
+    gap: 20px; /* More space between navigation items */
+}
 
-/* FONTE PRINCIPAL SEM SERIFA
-FONTE DA LOGO (TÍTULO)
-FONTE AUXILIAR (pode ser com serifa) */
+.nav-item {
+    border: 2px groove black; /* Lighter border */
+    padding: 20px;
+    flex: 1 1 200%;
+    text-align: center;
+    border-radius: 5px; /* Rounded corners */
+    transition: 0.3s ease; /* Smooth transitions */
+    background-color: #98fb6b
+}
+
+.nav-item:hover {
+    background-color: #0edc2d;
+    border-color: #333;
+    transform: translateY(-5px);
+}
+
+.logo {
+    padding: 10px;
+    width: 150px;
+    background-color: white;
+}
+
+/* --- Main Content Styles (Centralized & Styled) --- */
+.main-content-wrapper {
+    flex-grow: 1; /* Takes up available vertical space */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 40px 20px; /* Add padding around the centered block */
+    box-sizing: border-box;
+}
+
+.main-content-area {
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
+    border-radius: 10px; /* Rounded corners for the main content block */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between blocks inside main content */
+    max-width: 450px; /* Max width for the content block */
+    width: 100%; /* Ensures it's responsive up to max-width */
+    box-sizing: border-box;
+    text-align: center; /* Center align text inside this block */
+}
+
+.content-box {
+    /* Removed individual borders, now they are part of the main-content-area block */
+    padding: 10px 0; /* Only vertical padding */
+}
+
+.title-box h2 {
+    margin: 0; /* Remove default margin from h2 */
+    color: #333;
+    font-size: 2em; /* Larger title */
+    font-weight: 600;
+}
+
+.text-box p {
+    margin: 0; /* Remove default margin from p */
+    color: #555;
+    line-height: 1.6;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+    padding-top: 20px; /* Add some space above the form */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* A subtle line to separate from text */
+}
+
+.form-input {
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%; /* Make input take full width of its parent */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #98fb6b; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(54, 177, 73, 0.5);
+    outline: none; /* Remove default outline */
+}
+
+.submit-button {
+    background-color: #18a537; /* Blue submit button */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #0edc2d;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* --- Footer Styles (Subtle & Centralized) --- */
+.footer-container {
+    height: 80%;
+    padding: 15px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    font-size: 0.9em;
+    color: #555;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow upwards */
+}
+
+.footer-info span {
+    color: #0e6320;
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
+
+.footer-info span:hover {
+    color: #39ea5f;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* Ajustes para responsividade do cabeçalho */
+@media (max-width: 700px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 350px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 75%;
+    }
+
+    .nav-item {
+        width: 80%; /* Ocupa boa parte da largura da tela menor */
+        text-align: center;
+    }
+
+    .logo {
+        order: -1; /* Coloca a logo acima do menu se necessário */
+        width: 175px;
+    }
+
+    .main-content-area {
+        max-width: 300px
+    }
+}
