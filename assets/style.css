@@ -29,6 +29,13 @@ body {
     z-index: 1000; /* Ensures it stays on top */
 }
 
+.nav-links div a {
+    display: block;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+}
+
 .nav-links {
     display: flex;
     margin: 30px;
@@ -37,9 +44,8 @@ body {
 }
 
 .nav-item {
-    border: 2px groove black; /* Lighter border */
-    padding: 20px;
     flex: 1 1 200%;
+    border: 2px groove black; /* Lighter border */
     text-align: center;
     border-radius: 5px; /* Rounded corners */
     transition: 0.3s ease; /* Smooth transitions */
@@ -148,6 +154,7 @@ body {
     padding: 15px;
     border-top: 2px solid rgba(0, 0, 0, 0.1);
     display: flex;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.9);
@@ -158,7 +165,7 @@ body {
 }
 
 .footer-info span {
-    color: #0e6320;
+    color: #18b139;
     text-decoration: underline;
     transition: 0.3s ease;
 }
