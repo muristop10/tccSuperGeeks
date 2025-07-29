@@ -14,6 +14,7 @@ $(document).ready(function(){
     $(".form-section").on("submit", function (event) {
     event.preventDefault(); // impede o recarregamento da página
 
+    const form = document.querySelector(".form-section");
     const paragrafoErro = $("#paragrafoErro");
     const cpfInput = $("#cpf").val().trim();
     // .trim pra tirar os espaços do inicio e fim
@@ -39,5 +40,12 @@ $(document).ready(function(){
             "margin":"10px"
         })
         paragrafoErro.fadeIn(600);
+        form.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        })
+
+        $("#cpf").val("");
+        $("#senha").val("");
     }
 });
