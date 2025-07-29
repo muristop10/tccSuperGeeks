@@ -30,6 +30,7 @@ $(document).ready(function(){
         // Redireciona para o painel principal
         window.location.href = "./assets/HTML/painel.html";
     } else {
+        // css do paragrafo de erro
         paragrafoErro.hide()
         paragrafoErro.text("Usuário não encontrado, tente novamente!")
         paragrafoErro.css({
@@ -45,6 +46,7 @@ $(document).ready(function(){
             block: "center"
         })
 
+        // limpa os inputs
         $("#cpf").val("");
         $("#senha").val("");
     }
