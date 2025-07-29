@@ -49,5 +49,8 @@ $(document).ready(function(){
         // limpa os inputs
         $("#cpf").val("");
         $("#senha").val("");
+
+        // tempo de 5 segundos pra sumir
+        setTimeout(() => {paragrafoErro.fadeOut(600)}, 5000); 
     }
 });
