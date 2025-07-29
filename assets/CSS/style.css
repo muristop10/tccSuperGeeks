@@ -8,7 +8,7 @@ body {
     overflow-y: auto; /* Enable scrolling if content exceeds viewport height */
 
     /* Background Image Styling */
-    background-image: url("./images/bgImg.jpg"); /* REPLACE THIS URL with your image path */
+    background-image: url("../images/bgImg.jpg"); /* REPLACE THIS URL with your image path */
     background-size: cover; /* Covers the entire body */
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Keeps the background fixed when scrolling */
@@ -49,11 +49,11 @@ body {
     text-align: center;
     border-radius: 5px; /* Rounded corners */
     transition: 0.3s ease; /* Smooth transitions */
-    background-color: #98fb6b
+    background-color: #26e91c
 }
 
 .nav-item:hover {
-    background-color: #0edc2d;
+    background-color: #24be3b;
     border-color: #333;
     transform: translateY(-5px);
 }
@@ -162,6 +162,10 @@ body {
     font-size: 0.9em;
     color: #555;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow upwards */
+}
+
+#paragrafoErro {
+    display: none;
 }
 
 .footer-info span {

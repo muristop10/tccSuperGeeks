@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IR Agro</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
     <link rel="icon" href="./assets/images/logo4.jpeg">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- mascara de inputs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 <body>
 
     <header class="navbar-container">
 
         <nav class="nav-links">
-            <div class="nav-item"><a href="contato.html"><strong>Contato</strong></a></div>
-            <div class="nav-item"><a href="sobre.html"><strong>Sobre nós</strong></a></div>
+            <div class="nav-item"><a href="./assets/HTML/contato.html"><strong>Contato</strong></a></div>
+            <div class="nav-item"><a href="./assets/HTML/sobre.html"><strong>Sobre nós</strong></a></div>
         </nav>
 
         <img class="logo" src="./assets/images/logo1.jpeg"></div>
@@ -30,10 +34,12 @@
             </div>
 
             <form class="form-section">
-                <input type="email" placeholder="Email" class="form-input"> 
-                <input type="password" placeholder="Senha" class="form-input"> 
-                <button type="submit" class="submit-button">Entrar</button> 
+                <input placeholder="CPF" class="form-input" id="cpf"> 
+                <input type="password" placeholder="Senha" class="form-input" id="senha"> 
+                <button type="submit" class="submit-button" id="submitButton">Entrar</button> 
             </form>
+
+            <p id="paragrafoErro"></p>
 
         </div>
     </main>
@@ -43,8 +49,9 @@
         <div class="footer-info">
             <p>Endereço: Nonoai, Rua Orelho Estevão Fontana, 1180</p>
             <p>Telefone: <span>+55 54 8118-1700</span></p>
-            <p>Nome: Juliano Manoel Thomé</p>
         </div>
     </footer>
+
+    <script src="./assets/scripts/scriptIndex.js" defer></script>
 </body>
 </html>
