@@ -11,8 +11,26 @@ body {
     background-image: url("../images/bgImg.jpg"); /* REPLACE THIS URL with your image path */
     background-size: cover; /* Covers the entire body */
     background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+/* f background fixed */
     background-color: transparent; /* Fallback color if image doesn't load */
+
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;       /* Fixa na tela, mesmo com scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/bgImg.jpg"); /* Seu caminho da imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;           /* Coloca atrás do conteúdo */
+    pointer-events: none;  /* Para não interferir em cliques */
 }
 
 /* --- Navbar Styles (Larger & with subtle shadow) --- */
@@ -132,7 +150,7 @@ body {
 }
 
 .submit-button {
-    background-color: #18a537; /* Blue submit button */
+    background-color: #18a537;
     color: white;
     border: none;
     padding: 12px 25px;
