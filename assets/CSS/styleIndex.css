@@ -169,7 +169,7 @@ body::before {
 /* --- Footer Styles (Subtle & Centralized) --- */
 .footer-container {
     height: 80%;
-    padding: 15px;
+    padding: 10px;
     border-top: 2px solid rgba(0, 0, 0, 0.1);
     display: flex;
     text-align: center;

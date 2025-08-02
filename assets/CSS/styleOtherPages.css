@@ -1,6 +1,8 @@
 html {
     scroll-behavior: smooth;
+    transition: 0.3s ease;
 }
+
 
 /* Basic Reset & Body Styles */
 :root {
@@ -49,19 +51,17 @@ header h1 {
     font-size: 2.2rem; /* Smaller title as requested */
     font-weight: 700;
     text-align: center;
-    padding-bottom: 0.5rem;
 }
 
 /* Navigation Styles */
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 20px;
     margin: 0;
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
     justify-content: center;
     gap: 1.5rem; /* Space between nav items */
-    padding: 20px;
 }
 
 nav ul li {
@@ -84,7 +84,8 @@ nav ul li a {
     font-size: 120%;
 }
 
-nav ul li a:hover, nav ul li a.active {
+nav ul li a:hover,
+nav ul li a.active {
     background-color: var(--accent-color);
     color: var(--light-text-color);
 }
@@ -104,7 +105,7 @@ nav ul li a:hover, nav ul li a.active {
     text-decoration: none;
     transition: 0.3s ease;
     margin-bottom: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 #botaoVoltarLogin a:hover {
@@ -114,7 +115,7 @@ nav ul li a:hover, nav ul li a.active {
     transition: 0.3s ease;
 }
 
-/* Main Content Styles */
+/* Main Content Styles - General Sections */
 main {
     flex: 1; /* Allows main content to grow and push footer down */
     max-width: 1200px;
@@ -143,17 +144,72 @@ section p {
     margin-bottom: 1rem;
 }
 
-/* Image Styling (for potential use in contact page or future additions) */
+/* Image Styling */
 img {
     margin-top: 20px;
-    width: 20%;
+    max-width: 20%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 1rem;
+    transition: 0.3s ease;
+}
+
+img:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover img {
+    transform: scale(1.05);
 }
 
 .member-card figure {
     text-align: center;
+}
+
+.icon-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Link ocupa 100% da icon-container */
+.icon-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-container img {
+    width: 60%;
+    max-width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.icon-container:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.contact-card p a {
+    text-decoration: none;
+    font-size: 105%;
+    color:var(--primary-color);
+    font-weight: 600;
+}
+
+.contact-card p a:hover {
+    text-decoration: underline;
 }
 
 /* Form Styles (for contact page reusability) */
@@ -201,15 +257,55 @@ button[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
+/* Contact Page Specific Styles - Cards */
+
+.mainContato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Ensure it takes full width for flexbox */
+}
+
+.mainContato div img {
+    width: 100%;
+    max-width: 2x;
+}
+
+.mainContato div a:hover {
+    cursor: pointer;
+}
+
+.mainContato div {
+    border: 2px solid var(--border-color);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    max-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mainContato div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
 /* Footer Styles */
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--header-bg);
     color: var(--light-text-color);
     text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
+    padding: 2rem 0;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 /* Responsive Design */
@@ -239,29 +335,20 @@ footer {
     }
 
     img {
-        width: 50%;
+        width: 60%;
+        max-width: 60%;
         text-align: center;
     }
 
     section h2 {
         font-size: 1.5rem;
     }
+
+    footer {
+        padding: 2rem 20px;
+    }
+
+    .contact-card p a {
+        font-size: 95%;
+    }
 }
-
-/* @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    nav ul li a {
-        font-size: 0.9rem;
-    }
-
-    section {
-        padding: 1rem;
-    }
-
-    section h2 {
-        font-size: 1.3rem;
-    }
-} */
