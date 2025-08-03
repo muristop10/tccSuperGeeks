@@ -1,10 +1,16 @@
-html {
-    scroll-behavior: smooth;
-    transition: 0.3s ease;
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Impede scroll horizontal */
 }
 
-
-/* Basic Reset & Body Styles */
 :root {
     --primary-color: #13802b;
     --secondary-color: #555;
@@ -16,18 +22,6 @@ html {
     --header-bg: #18a537;
 }
 
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif; /* Using Inter as requested */
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures footer stays at the bottom */
-}
-
-/* Header Styles */
 header {
     background-color: var(--header-bg);
     color: var(--light-text-color);
@@ -48,20 +42,19 @@ header .container {
 
 header h1 {
     margin-top: 30px;
-    font-size: 2.2rem; /* Smaller title as requested */
+    font-size: 2.2rem;
     font-weight: 700;
     text-align: center;
 }
 
-/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 20px;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem; /* Space between nav items */
+    gap: 1.5rem;
 }
 
 nav ul li {
@@ -112,12 +105,10 @@ nav ul li a.active {
     background-color: var(--accent-color);
     color: var(--light-text-color);
     transform: translateY(-2px);
-    transition: 0.3s ease;
 }
 
-/* Main Content Styles - General Sections */
 main {
-    flex: 1; /* Allows main content to grow and push footer down */
+    flex: 1;
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
@@ -138,13 +129,13 @@ section h2 {
     margin-bottom: 1rem;
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.5rem;
+    text-align: center;
 }
 
 section p {
     margin-bottom: 1rem;
 }
 
-/* Image Styling */
 img {
     margin-top: 20px;
     max-width: 20%;
@@ -180,7 +171,6 @@ img:hover {
     position: relative;
 }
 
-/* Link ocupa 100% da icon-container */
 .icon-container a {
     display: flex;
     align-items: center;
@@ -191,8 +181,8 @@ img:hover {
 
 .icon-container img {
     width: 60%;
-    max-width: 60%;
-    height: 60%;
+    height: auto;
+    max-width: 100%;
     object-fit: contain;
 }
 
@@ -204,7 +194,7 @@ img:hover {
 .contact-card p a {
     text-decoration: none;
     font-size: 105%;
-    color:var(--primary-color);
+    color: var(--primary-color);
     font-weight: 600;
 }
 
@@ -212,7 +202,6 @@ img:hover {
     text-decoration: underline;
 }
 
-/* Form Styles (for contact page reusability) */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -232,11 +221,11 @@ img:hover {
     border: 1px solid var(--border-color);
     border-radius: 5px;
     font-size: 1rem;
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box;
 }
 
 .form-group textarea {
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical;
     min-height: 120px;
 }
 
@@ -257,47 +246,38 @@ button[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
-/* Contact Page Specific Styles - Cards */
-
 .mainContato {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%; /* Ensure it takes full width for flexbox */
-}
-
-.mainContato div img {
+    gap: 1.5rem;
     width: 100%;
-    max-width: 2x;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
-.mainContato div a:hover {
-    cursor: pointer;
-}
-
-.mainContato div {
+.mainContato .contact-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    min-width: 220px;
+    margin: 0.5rem;
+    padding: 1rem;
     border: 2px solid var(--border-color);
-    margin: 20px;
-    padding: 10px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 50%;
-    max-width: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mainContato div:hover {
+.mainContato .contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-
-/* Footer Styles */
 footer {
     background-color: var(--header-bg);
     color: var(--light-text-color);
@@ -305,10 +285,9 @@ footer {
     padding: 2rem 0;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: auto;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.8rem;
