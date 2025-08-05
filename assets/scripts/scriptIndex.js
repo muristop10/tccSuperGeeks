@@ -1,8 +1,8 @@
 // usuários, senhas e links de redirecionamento
 const users = [
-  { cpf: "111.222.333-44", senha: "1234", nome: "Murilo Thomé" },
-  { cpf: "123.456.789-01", senha: "abc123", nome: "João da Silva" },
-  { cpf: "987.654.432-10", senha: "senha456", nome: "Maria Oliveira" },
+  {cpf: "111.222.333-44", senha: "1234", nome: "Murilo Thomé" },
+  {cpf: "123.456.789-01", senha: "abc123", nome: "João da Silva"},
+  {cpf: "987.654.432-10", senha: "senha456", nome: "Maria Oliveira"}
 ];
 
 // mascara de inputs do cpf, ajeita o resultado na estrutura certa
@@ -20,14 +20,15 @@ $(document).ready(function(){
     // .trim pra tirar os espaços do inicio e fim
     const senhaInput = $("#senha").val();
 
+    //verificação, compara os dados do login com os dados de cada user da lista
     const user = users.find(u => u.cpf === cpfInput && u.senha === senhaInput);
 
     if (user) {
-        // Armazena o nome do usuário no localStorage
+        // armazena o nome do usuário no localStorage
         // usa o método stringify do JSON pra transformar o objeto do usuário em string
-        localStorage.setItem("nome", JSON.stringify(user)); 
+        localStorage.setItem("User", JSON.stringify(user)); 
 
-        // Redireciona para o painel principal
+        // redireciona para o painel principal
         window.location.href = "./assets/HTML/painel.html";
     } else {
         // css do paragrafo de erro
