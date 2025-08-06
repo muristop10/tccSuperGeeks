@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // preenchimento de campos
     titulo.textContent = `Bem-vindo, ${user.nome}!`;
     pLuz.textContent = `Despesas com luz: R$ ${user.contas.luz}`
-    pAgua.textContent = `Despesas com luz: R$ ${user.contas.agua}`
-    pInternet.textContent = `Despesas com luz: R$ ${user.contas.internet}`
-    pAluguel.textContent = `Despesas com luz: R$ ${user.contas.aluguel}`
-    pGasolina.textContent = `Despesas com luz: R$ ${user.contas.gasolina}`
+    pAgua.textContent = `Despesas com água: R$ ${user.contas.agua}`
+    pInternet.textContent = `Despesas com internet: R$ ${user.contas.internet}`
+    pAluguel.textContent = `Despesas com aluguel: R$ ${user.contas.aluguel}`
+    pGasolina.textContent = `Despesas com gasolina: R$ ${user.contas.gasolina}`
 
 
 
