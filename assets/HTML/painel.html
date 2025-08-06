@@ -24,13 +24,45 @@
 
         <h1 id="tituloNome"></h1>
 
+        <div id="divGraficos">
+                <section id="graficos">
+                <div>
+                    <h2>Gráfico de Salários</h2>
+                    <canvas id="graficoSalario"></canvas>
+                </div>
 
+                <div>
+                    <h2>Despesas Mensais</h2>
+                    <canvas id="graficoDespesas"></canvas>
+                </div>
+
+                <div>
+                    <h2>Investimentos</h2>
+                    <canvas id="graficoInvestimentos"></canvas>
+                </div>
+            </section>
+        </div>
+
+        <section id="sectionContas" style="padding: 20px; margin: 20px;">
+            <h2>Dados das contas</h2>
+            <ul>
+                <li><p id="pLuz"></p></li>
+                <li><p id="pAgua"></p></li>
+                <li><p id="pInternet"></p></li>
+                <li><p id="pAluguel"></p></li>
+                <li><p id="pGasolina"></p></li>
+            </ul>
+        </section>
 
         <footer>
             <p>&copy;IrAgro, Todos os direitos reservados (ou não).</p>
         </footer>
 
+        <!-- script js -->
         <script src="../scripts/scriptPainel.js" defer></script>
+
+        <!-- script chart.js, para criação dos gráficos -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
         
     </body>
 </html>
