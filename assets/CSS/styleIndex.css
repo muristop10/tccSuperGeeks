@@ -4,6 +4,7 @@ body {
     font-family: Arial, Helvetica, sans-serif; /* A slightly nicer font */
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
     min-height: 100vh; /* Full viewport height */
     overflow-y: auto; /* Enable scrolling if content exceeds viewport height */
 

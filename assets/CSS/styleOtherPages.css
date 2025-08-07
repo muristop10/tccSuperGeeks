@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    scroll-behavior: smooth;
     color: var(--text-color);
     background-color: var(--background-color);
     display: flex;
